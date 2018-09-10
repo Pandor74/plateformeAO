@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   
+   <link rel="stylesheet" href={% static 'css/base_style.css' %} />
+   {% block stylepers %}
+   {% endblock %}
+
+   {% block jquerypers %}
+   {% endblock %}
+
+   <title>{% block title %}Plateforme{% endblock %}</title>
+
+</head>
+
+
+<body>
+<header>
+	<nav>
+       {% block nav %}
+       test de la navigation
+       {% endblock %}
+   </nav>
+</header>
+    
+
+   <section id="content">
+       {% block content %}test content{% endblock %}
+   </section>
+
+
+<footer>{% block pied %}test pied{% endblock %}</footer>
+</body>
+</html>
